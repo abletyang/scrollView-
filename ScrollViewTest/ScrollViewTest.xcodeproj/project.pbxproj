@@ -15,6 +15,7 @@
 		C58C134020E74F2B00D7EDCA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C58C133F20E74F2B00D7EDCA /* main.m */; };
 		C58C134A20E74F2B00D7EDCA /* ScrollViewTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C58C134920E74F2B00D7EDCA /* ScrollViewTestTests.m */; };
 		C58C135520E74F2B00D7EDCA /* ScrollViewTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C58C135420E74F2B00D7EDCA /* ScrollViewTestUITests.m */; };
+		C58C137820E752E800D7EDCA /* libMySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C58C137920E752E800D7EDCA /* libMySDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		C58C135020E74F2B00D7EDCA /* ScrollViewTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollViewTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58C135420E74F2B00D7EDCA /* ScrollViewTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollViewTestUITests.m; sourceTree = "<group>"; };
 		C58C135620E74F2B00D7EDCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C58C137920E752E800D7EDCA /* libMySDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMySDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C58C137820E752E800D7EDCA /* libMySDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +88,7 @@
 				C58C134820E74F2B00D7EDCA /* ScrollViewTestTests */,
 				C58C135320E74F2B00D7EDCA /* ScrollViewTestUITests */,
 				C58C132E20E74F2B00D7EDCA /* Products */,
+				C58C137720E752E800D7EDCA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +134,14 @@
 				C58C135620E74F2B00D7EDCA /* Info.plist */,
 			);
 			path = ScrollViewTestUITests;
+			sourceTree = "<group>";
+		};
+		C58C137720E752E800D7EDCA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C58C137920E752E800D7EDCA /* libMySDK.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,9 +445,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ScrollViewTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "/Users/yangyun/Desktop/Yangyun/GitProgram/ScrollView系列/MySDK";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Abletyang.ScrollViewTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "/Users/yangyun/Desktop/Yangyun/GitProgram/ScrollView系列/MySDK";
 			};
 			name = Debug;
 		};
@@ -446,9 +460,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ScrollViewTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "/Users/yangyun/Desktop/Yangyun/GitProgram/ScrollView系列/MySDK";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Abletyang.ScrollViewTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "/Users/yangyun/Desktop/Yangyun/GitProgram/ScrollView系列/MySDK";
 			};
 			name = Release;
 		};
