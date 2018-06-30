@@ -16,6 +16,7 @@
 		C58C134A20E74F2B00D7EDCA /* ScrollViewTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C58C134920E74F2B00D7EDCA /* ScrollViewTestTests.m */; };
 		C58C135520E74F2B00D7EDCA /* ScrollViewTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C58C135420E74F2B00D7EDCA /* ScrollViewTestUITests.m */; };
 		C58C137820E752E800D7EDCA /* libMySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C58C137920E752E800D7EDCA /* libMySDK.a */; };
+		DDD5D5CD755375D0C4437D52 /* libPods-ScrollViewTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D42A25814A455294775BFD73 /* libPods-ScrollViewTest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A52F8C2A5B7FE6EE8802882 /* Pods-ScrollViewTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollViewTest.release.xcconfig"; path = "../Pods/Target Support Files/Pods-ScrollViewTest/Pods-ScrollViewTest.release.xcconfig"; sourceTree = "<group>"; };
 		C58C132D20E74F2B00D7EDCA /* ScrollViewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollViewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58C133020E74F2B00D7EDCA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C58C133120E74F2B00D7EDCA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,6 +55,8 @@
 		C58C135420E74F2B00D7EDCA /* ScrollViewTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollViewTestUITests.m; sourceTree = "<group>"; };
 		C58C135620E74F2B00D7EDCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C58C137920E752E800D7EDCA /* libMySDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMySDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC7376A3D81135A2288404E8 /* Pods-ScrollViewTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollViewTest.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-ScrollViewTest/Pods-ScrollViewTest.debug.xcconfig"; sourceTree = "<group>"; };
+		D42A25814A455294775BFD73 /* libPods-ScrollViewTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ScrollViewTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C58C137820E752E800D7EDCA /* libMySDK.a in Frameworks */,
+				DDD5D5CD755375D0C4437D52 /* libPods-ScrollViewTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7AAB963BB6FB94C65FF7A6C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC7376A3D81135A2288404E8 /* Pods-ScrollViewTest.debug.xcconfig */,
+				8A52F8C2A5B7FE6EE8802882 /* Pods-ScrollViewTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C58C132420E74F2A00D7EDCA = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +103,7 @@
 				C58C135320E74F2B00D7EDCA /* ScrollViewTestUITests */,
 				C58C132E20E74F2B00D7EDCA /* Products */,
 				C58C137720E752E800D7EDCA /* Frameworks */,
+				7AAB963BB6FB94C65FF7A6C4 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				C58C137920E752E800D7EDCA /* libMySDK.a */,
+				D42A25814A455294775BFD73 /* libPods-ScrollViewTest.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -151,9 +167,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C58C135920E74F2B00D7EDCA /* Build configuration list for PBXNativeTarget "ScrollViewTest" */;
 			buildPhases = (
+				A3AA8DE5F806789F29CF1D1F /* [CP] Check Pods Manifest.lock */,
 				C58C132920E74F2B00D7EDCA /* Sources */,
 				C58C132A20E74F2B00D7EDCA /* Frameworks */,
 				C58C132B20E74F2B00D7EDCA /* Resources */,
+				5754C4539CE1DB4920450AAD /* [CP] Embed Pods Frameworks */,
+				E20370A442A19FECDCD58B08 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,6 +290,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5754C4539CE1DB4920450AAD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-ScrollViewTest/Pods-ScrollViewTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3AA8DE5F806789F29CF1D1F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScrollViewTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E20370A442A19FECDCD58B08 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-ScrollViewTest/Pods-ScrollViewTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C58C132920E74F2B00D7EDCA /* Sources */ = {
@@ -440,31 +510,35 @@
 		};
 		C58C135A20E74F2B00D7EDCA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC7376A3D81135A2288404E8 /* Pods-ScrollViewTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ScrollViewTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "/Users/yangyun/Desktop/Yangyun/GitProgram/ScrollView系列/MySDK";
+				LIBRARY_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Abletyang.ScrollViewTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "/Users/yangyun/Desktop/Yangyun/GitProgram/ScrollView系列/MySDK";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 			};
 			name = Debug;
 		};
 		C58C135B20E74F2B00D7EDCA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A52F8C2A5B7FE6EE8802882 /* Pods-ScrollViewTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ScrollViewTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "/Users/yangyun/Desktop/Yangyun/GitProgram/ScrollView系列/MySDK";
+				LIBRARY_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Abletyang.ScrollViewTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "/Users/yangyun/Desktop/Yangyun/GitProgram/ScrollView系列/MySDK";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 			};
 			name = Release;
 		};
