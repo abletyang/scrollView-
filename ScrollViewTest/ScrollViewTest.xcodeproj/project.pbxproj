@@ -15,7 +15,8 @@
 		C58C134020E74F2B00D7EDCA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C58C133F20E74F2B00D7EDCA /* main.m */; };
 		C58C134A20E74F2B00D7EDCA /* ScrollViewTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C58C134920E74F2B00D7EDCA /* ScrollViewTestTests.m */; };
 		C58C135520E74F2B00D7EDCA /* ScrollViewTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C58C135420E74F2B00D7EDCA /* ScrollViewTestUITests.m */; };
-		C58C137820E752E800D7EDCA /* libMySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C58C137920E752E800D7EDCA /* libMySDK.a */; };
+		C58C137D20E77C7B00D7EDCA /* YYScrollknowledgeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C58C137C20E77C7B00D7EDCA /* YYScrollknowledgeVC.m */; };
+		C5D666B520E9F4D200CC9644 /* libMySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D666B620E9F4D200CC9644 /* libMySDK.a */; };
 		DDD5D5CD755375D0C4437D52 /* libPods-ScrollViewTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D42A25814A455294775BFD73 /* libPods-ScrollViewTest.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,10 @@
 		C58C135420E74F2B00D7EDCA /* ScrollViewTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollViewTestUITests.m; sourceTree = "<group>"; };
 		C58C135620E74F2B00D7EDCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C58C137920E752E800D7EDCA /* libMySDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMySDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C58C137B20E77C7B00D7EDCA /* YYScrollknowledgeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYScrollknowledgeVC.h; sourceTree = "<group>"; };
+		C58C137C20E77C7B00D7EDCA /* YYScrollknowledgeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYScrollknowledgeVC.m; sourceTree = "<group>"; };
+		C5D666B320E9F14700CC9644 /* UtilMarco.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilMarco.pch; sourceTree = "<group>"; };
+		C5D666B620E9F4D200CC9644 /* libMySDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMySDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7376A3D81135A2288404E8 /* Pods-ScrollViewTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollViewTest.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-ScrollViewTest/Pods-ScrollViewTest.debug.xcconfig"; sourceTree = "<group>"; };
 		D42A25814A455294775BFD73 /* libPods-ScrollViewTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ScrollViewTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -64,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C58C137820E752E800D7EDCA /* libMySDK.a in Frameworks */,
+				C5D666B520E9F4D200CC9644 /* libMySDK.a in Frameworks */,
 				DDD5D5CD755375D0C4437D52 /* libPods-ScrollViewTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,6 +129,8 @@
 				C58C133120E74F2B00D7EDCA /* AppDelegate.m */,
 				C58C133320E74F2B00D7EDCA /* ViewController.h */,
 				C58C133420E74F2B00D7EDCA /* ViewController.m */,
+				C58C137A20E77C0D00D7EDCA /* SubViewController */,
+				C5D666B220E9ED4100CC9644 /* Utils */,
 				C58C133620E74F2B00D7EDCA /* Main.storyboard */,
 				C58C133920E74F2B00D7EDCA /* Assets.xcassets */,
 				C58C133B20E74F2B00D7EDCA /* LaunchScreen.storyboard */,
@@ -154,10 +161,28 @@
 		C58C137720E752E800D7EDCA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C5D666B620E9F4D200CC9644 /* libMySDK.a */,
 				C58C137920E752E800D7EDCA /* libMySDK.a */,
 				D42A25814A455294775BFD73 /* libPods-ScrollViewTest.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C58C137A20E77C0D00D7EDCA /* SubViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C58C137B20E77C7B00D7EDCA /* YYScrollknowledgeVC.h */,
+				C58C137C20E77C7B00D7EDCA /* YYScrollknowledgeVC.m */,
+			);
+			path = SubViewController;
+			sourceTree = "<group>";
+		};
+		C5D666B220E9ED4100CC9644 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C5D666B320E9F14700CC9644 /* UtilMarco.pch */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,6 +374,7 @@
 			files = (
 				C58C133520E74F2B00D7EDCA /* ViewController.m in Sources */,
 				C58C134020E74F2B00D7EDCA /* main.m in Sources */,
+				C58C137D20E77C7B00D7EDCA /* YYScrollknowledgeVC.m in Sources */,
 				C58C133220E74F2B00D7EDCA /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +540,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ScrollViewTest/Utils/UtilMarco.pch";
 				INFOPLIST_FILE = ScrollViewTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
@@ -531,6 +559,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ScrollViewTest/Utils/UtilMarco.pch";
 				INFOPLIST_FILE = ScrollViewTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";

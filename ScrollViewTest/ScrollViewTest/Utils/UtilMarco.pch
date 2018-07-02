@@ -1,0 +1,17 @@
+//
+//  UtilMarco.pch
+//  ScrollViewTest
+//
+//  Created by 杨赟 on 2018/7/2.
+//  Copyright © 2018年 杨赟. All rights reserved.
+//
+
+#ifndef UtilMarco_pch
+#define UtilMarco_pch
+
+#ifdef __OBJC__
+#import "MyCategory.h"
+#import <Masonry.h>
+#endif
+
+#endif /* UtilMarco_pch */
