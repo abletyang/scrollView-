@@ -12,6 +12,8 @@
 		C58C138120E77E3D00D7EDCA /* UIView+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C58C138020E77E3D00D7EDCA /* UIView+YYExtension.m */; };
 		C5D666B720E9F72100CC9644 /* MyCategory.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C5D666B420E9F35900CC9644 /* MyCategory.h */; };
 		C5D666B820E9F72A00CC9644 /* UIView+YYExtension.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C58C137F20E77E3D00D7EDCA /* UIView+YYExtension.h */; };
+		C5D666BC20E9FAC400CC9644 /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D666BB20E9FAC400CC9644 /* UIColor+Category.m */; };
+		C5D666BD20E9FC8100CC9644 /* UIColor+Category.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C5D666BA20E9FAC400CC9644 /* UIColor+Category.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -21,6 +23,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				C5D666BD20E9FC8100CC9644 /* UIColor+Category.h in CopyFiles */,
 				C5D666B820E9F72A00CC9644 /* UIView+YYExtension.h in CopyFiles */,
 				C5D666B720E9F72100CC9644 /* MyCategory.h in CopyFiles */,
 				C58C137120E7519700D7EDCA /* MySDK.h in CopyFiles */,
@@ -36,6 +39,8 @@
 		C58C137F20E77E3D00D7EDCA /* UIView+YYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+YYExtension.h"; sourceTree = "<group>"; };
 		C58C138020E77E3D00D7EDCA /* UIView+YYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+YYExtension.m"; sourceTree = "<group>"; };
 		C5D666B420E9F35900CC9644 /* MyCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCategory.h; sourceTree = "<group>"; };
+		C5D666BA20E9FAC400CC9644 /* UIColor+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Category.h"; sourceTree = "<group>"; };
+		C5D666BB20E9FAC400CC9644 /* UIColor+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Category.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +76,7 @@
 				C58C136E20E7519700D7EDCA /* MySDK.h */,
 				C58C136F20E7519700D7EDCA /* MySDK.m */,
 				C5D666B420E9F35900CC9644 /* MyCategory.h */,
+				C5D666B920E9FA8600CC9644 /* UIColor */,
 				C58C137E20E77D9B00D7EDCA /* UIview */,
 			);
 			path = MySDK;
@@ -83,6 +89,15 @@
 				C58C138020E77E3D00D7EDCA /* UIView+YYExtension.m */,
 			);
 			path = UIview;
+			sourceTree = "<group>";
+		};
+		C5D666B920E9FA8600CC9644 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				C5D666BA20E9FAC400CC9644 /* UIColor+Category.h */,
+				C5D666BB20E9FAC400CC9644 /* UIColor+Category.m */,
+			);
+			path = UIColor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +159,7 @@
 			files = (
 				C58C138120E77E3D00D7EDCA /* UIView+YYExtension.m in Sources */,
 				C58C137020E7519700D7EDCA /* MySDK.m in Sources */,
+				C5D666BC20E9FAC400CC9644 /* UIColor+Category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

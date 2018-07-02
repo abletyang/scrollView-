@@ -14,6 +14,7 @@
 @property (nonatomic, strong) UITableView *tableView;
 
 @property (nonatomic, strong) NSMutableArray *dataArray;
+@property (nonatomic, strong) NSMutableArray *vcArray;
 
 @end
 
@@ -37,7 +38,12 @@
 -(void)initData
 {
     _dataArray = [NSMutableArray array];
+    _vcArray = [NSMutableArray array];
+    
     [_dataArray addObject:@"scrollView 基本使用"];
+    [_vcArray addObject:@"YYScrollknowledgeVC"];
+    
+    
 }
 -(void)initUI
 {
@@ -65,6 +71,17 @@
     NSString *text = self.dataArray[indexPath.row];
     cell.textLabel.text = text;
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    NSString *vcStr = self.vcArray[indexPath.row];
+    Class vcClass = NSClassFromString(vcStr);
+    UIViewController *vc = [[vcClass alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 #pragma mark -- 懒加载

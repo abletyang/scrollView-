@@ -10,5 +10,6 @@
 #define MyCategory_h
 
 #import "UIView+YYExtension.h"
+#import "UIColor+Category.h"
 
 #endif /* MyCategory_h */
