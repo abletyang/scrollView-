@@ -22,6 +22,14 @@
 
 @property (nonatomic, strong) UILongPressGestureRecognizer *longPress;
 
+//截图view
+@property (nonatomic, strong) UIView *snapView;
+
+//记录上一次移动的时候的indexPath
+@property (nonatomic, strong) NSIndexPath *oldIndexPath;
+
+@property (nonatomic, strong) NSIndexPath *moveIndexPath;
+
 @end
 
 @implementation YYDragCellType1VC
@@ -110,7 +118,7 @@
     if (@available(iOS 9.0, *)){
         [self cellMoveInIOS9:longPress];
     }else{
-//        [self cellMoveInIOS8:longPress];
+        [self cellMoveInIOS8:longPress];
     }
 }
 
@@ -161,7 +169,94 @@
     }
 }
 
+-(void)cellMoveInIOS8:(UILongPressGestureRecognizer *)longPress
+{
+    [self mx_longPressed:longPress];
+}
 
+/**
+ *  监听手势的改变
+ */
+- (void)mx_longPressed:(UILongPressGestureRecognizer *)longPressGesture{
+    if (longPressGesture.state == UIGestureRecognizerStateBegan) {
+        [self mx_gestureBegan:longPressGesture];
+    }
+    if (longPressGesture.state == UIGestureRecognizerStateChanged) {
+        [self mx_gestureChange:longPressGesture];
+    }
+    if (longPressGesture.state == UIGestureRecognizerStateCancelled ||
+        longPressGesture.state == UIGestureRecognizerStateEnded){
+        [self mx_gestureEndOrCancle:longPressGesture];
+    }
+}
+
+//手势开始的时候的方法      基本思路： 获取到长按的cell 截图放到原来cell的位置  将cell隐藏 移动过程中对截图进行操作
+- (void)mx_gestureBegan:(UILongPressGestureRecognizer *)longPressGesture{
+    //获取当前的长按的位置
+    CGPoint location = [longPressGesture locationInView:self.collectionView];
+    NSIndexPath* indexPath = [self.collectionView indexPathForItemAtPoint:location];
+    if(!indexPath) return;   //这里indexpath 可能为空 当你长按 空白的地方 这里要把其过滤掉
+    if(indexPath.section > 0) return;
+    //获取长按的cell
+    UICollectionViewCell* targetCell = [self.collectionView cellForItemAtIndexPath:indexPath];
+    //获取截图
+    UIView* snapView = [targetCell snapshotViewAfterScreenUpdates:YES];
+    self.snapView = snapView;
+    //将截图添加到collectionView上并设置位置
+    snapView.frame = targetCell.frame;
+    [self.collectionView addSubview:snapView];
+    //隐藏cell
+    targetCell.hidden = YES;
+    self.oldIndexPath = indexPath;
+    [UIView animateWithDuration:0.25 animations:^{
+        snapView.transform = CGAffineTransformMakeScale(1.05, 1.05);
+        snapView.center = location;
+    }];
+}
+
+- (void)mx_gestureChange:(UILongPressGestureRecognizer *)longPressGesture{
+    CGPoint currentPoint = [longPressGesture locationInView:self.collectionView];
+    self.snapView.center = currentPoint;
+    // 计算截图视图和哪个可见cell相交
+    for (UICollectionViewCell *cell in self.collectionView.visibleCells) {
+        // 当前隐藏的cell就不需要交换了,直接continue
+        if ([self.collectionView indexPathForCell:cell] == self.oldIndexPath) {
+            continue;
+        }
+        // 计算中心距
+        CGFloat space = sqrtf(pow(self.snapView.center.x - cell.center.x, 2) + powf(self.snapView.center.y - cell.center.y, 2));
+        // 如果相交一半就移动
+        if (space <= self.snapView.bounds.size.width / 2) {
+            self.moveIndexPath = [self.collectionView indexPathForCell:cell];
+            //移动 会调用willMoveToIndexPath方法更新数据源
+            NSLog(@"YYLOG old : %ld -- %ld",(long)self.oldIndexPath.section, (long)self.oldIndexPath.item);
+            NSLog(@"YYLOG move : %ld -- %ld",(long)self.moveIndexPath.section, (long)self.moveIndexPath.item);
+            if(self.moveIndexPath.section > 0){
+                continue;
+            }
+            [self.collectionView moveItemAtIndexPath:self.oldIndexPath toIndexPath:self.moveIndexPath];
+            //设置移动后的起始indexPath
+            self.oldIndexPath = self.moveIndexPath;
+            break;
+        }
+    }
+}
+
+- (void)mx_gestureEndOrCancle:(UILongPressGestureRecognizer *)longPressGesture{
+    UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:self.oldIndexPath];
+    // 结束动画过程中停止交互,防止出问题
+    self.collectionView.userInteractionEnabled = NO;
+    // 给截图视图一个动画移动到隐藏cell的新位置
+    [UIView animateWithDuration:0.25 animations:^{
+        self.snapView.center = cell.center;
+        self.snapView.transform = CGAffineTransformMakeScale(1.0, 1.0);
+    } completion:^(BOOL finished) {
+        // 移除截图视图,显示隐藏的cell并开始交互
+        [self.snapView removeFromSuperview];
+        cell.hidden = NO;
+        self.collectionView.userInteractionEnabled = YES;
+    }];
+}
 
 #pragma mark --  移动item 代理
 
@@ -189,6 +284,15 @@
 //    }
 }
 
+//- (void)moveItemAtIndexPath:(NSIndexPath *)indexPath toIndexPath:(NSIndexPath *)newIndexPath
+//{
+//    if(!newIndexPath) return;
+//    NSString *item = _selItemArray[indexPath.item];
+//    [_selItemArray removeObject:item];
+//    [_selItemArray insertObject:item atIndex:newIndexPath.item];
+//
+//    self.oldIndexPath = newIndexPath;
+//}
 
 
 #pragma mark -- 懒加载
