@@ -1,28 +1,26 @@
 //
-//  ViewController.m
+//  YYDragCellVC.m
 //  CollectionViewTest
 //
-//  Created by 杨赟 on 2018/7/4.
+//  Created by 杨赟 on 2018/7/5.
 //  Copyright © 2018年 杨赟. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "YYDragCellVC.h"
 
-@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface YYDragCellVC ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @property (nonatomic, strong) NSMutableArray *vcArray;
-
 @end
 
-@implementation ViewController
+@implementation YYDragCellVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"ScrollViewTest";
     [self initData];
     [self initUI];
 }
@@ -38,8 +36,8 @@
     _dataArray = [NSMutableArray array];
     _vcArray = [NSMutableArray array];
     
-    [_dataArray addObject:@"Collection Cell拖拽重排"];
-    [_vcArray addObject:@"YYDragCellVC"];
+    [_dataArray addObject:@"两个section进行拖拽 只允许 第一个section的cell移动"];
+    [_vcArray addObject:@"YYDragCellType1VC"];
     
     
 }
@@ -91,5 +89,6 @@
     }
     return _tableView;
 }
+
 
 @end

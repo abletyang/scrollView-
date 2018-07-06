@@ -12,6 +12,7 @@
 #ifdef __OBJC__
 #import "MyCategory.h"
 #import <Masonry.h>
+#import "YYUICommonDefines.h"
 #endif
 
 #endif /* UtilMarco_pch */

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C522600E20EDB6DF00CEFB2F /* YYDragCellVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C522600D20EDB6DF00CEFB2F /* YYDragCellVC.m */; };
+		C522601320EDBC1700CEFB2F /* YYDragCellType1VC.m in Sources */ = {isa = PBXBuildFile; fileRef = C522601220EDBC1700CEFB2F /* YYDragCellType1VC.m */; };
+		C522601720EDBEBF00CEFB2F /* YYFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C522601620EDBEBF00CEFB2F /* YYFlowLayout.m */; };
+		C522601D20EDC90C00CEFB2F /* IMEditItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C522601B20EDC90C00CEFB2F /* IMEditItemCell.m */; };
 		C5CD8EEF20ECF2DE0074F18F /* libMySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CD8EF020ECF2DE0074F18F /* libMySDK.a */; };
 		C5FE1E0220ECF1CA00D45CD2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FE1E0120ECF1CA00D45CD2 /* AppDelegate.m */; };
 		C5FE1E0520ECF1CA00D45CD2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FE1E0420ECF1CA00D45CD2 /* ViewController.m */; };
@@ -41,6 +45,15 @@
 		88833E1B291527549506F4DC /* Pods-CollectionViewTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectionViewTest.release.xcconfig"; path = "../Pods/Target Support Files/Pods-CollectionViewTest/Pods-CollectionViewTest.release.xcconfig"; sourceTree = "<group>"; };
 		971F92ECC4BE4C3E5132C42A /* libPods-CollectionViewTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CollectionViewTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C522600A20EDAAA000CEFB2F /* UtilMarco.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilMarco.pch; sourceTree = "<group>"; };
+		C522600C20EDB6DF00CEFB2F /* YYDragCellVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYDragCellVC.h; sourceTree = "<group>"; };
+		C522600D20EDB6DF00CEFB2F /* YYDragCellVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYDragCellVC.m; sourceTree = "<group>"; };
+		C522601120EDBC1700CEFB2F /* YYDragCellType1VC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYDragCellType1VC.h; sourceTree = "<group>"; };
+		C522601220EDBC1700CEFB2F /* YYDragCellType1VC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYDragCellType1VC.m; sourceTree = "<group>"; };
+		C522601520EDBEBF00CEFB2F /* YYFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYFlowLayout.h; sourceTree = "<group>"; };
+		C522601620EDBEBF00CEFB2F /* YYFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYFlowLayout.m; sourceTree = "<group>"; };
+		C522601820EDC10A00CEFB2F /* YYUICommonDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYUICommonDefines.h; sourceTree = "<group>"; };
+		C522601B20EDC90C00CEFB2F /* IMEditItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMEditItemCell.m; sourceTree = "<group>"; };
+		C522601C20EDC90C00CEFB2F /* IMEditItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMEditItemCell.h; sourceTree = "<group>"; };
 		C5CD8EF020ECF2DE0074F18F /* libMySDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMySDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5FE1DFD20ECF1CA00D45CD2 /* CollectionViewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5FE1E0020ECF1CA00D45CD2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -100,8 +113,63 @@
 			isa = PBXGroup;
 			children = (
 				C522600A20EDAAA000CEFB2F /* UtilMarco.pch */,
+				C522601820EDC10A00CEFB2F /* YYUICommonDefines.h */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		C522600B20EDB65A00CEFB2F /* SubViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C522600C20EDB6DF00CEFB2F /* YYDragCellVC.h */,
+				C522600D20EDB6DF00CEFB2F /* YYDragCellVC.m */,
+			);
+			path = SubViewControllers;
+			sourceTree = "<group>";
+		};
+		C522600F20EDBBB100CEFB2F /* DragCellVC */ = {
+			isa = PBXGroup;
+			children = (
+				C522601920EDC8D200CEFB2F /* View */,
+				C522601420EDBC6B00CEFB2F /* FlowLayout */,
+				C522601020EDBBEF00CEFB2F /* VC */,
+			);
+			path = DragCellVC;
+			sourceTree = "<group>";
+		};
+		C522601020EDBBEF00CEFB2F /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				C522601120EDBC1700CEFB2F /* YYDragCellType1VC.h */,
+				C522601220EDBC1700CEFB2F /* YYDragCellType1VC.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		C522601420EDBC6B00CEFB2F /* FlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				C522601520EDBEBF00CEFB2F /* YYFlowLayout.h */,
+				C522601620EDBEBF00CEFB2F /* YYFlowLayout.m */,
+			);
+			path = FlowLayout;
+			sourceTree = "<group>";
+		};
+		C522601920EDC8D200CEFB2F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C522601A20EDC8E300CEFB2F /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C522601A20EDC8E300CEFB2F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C522601C20EDC90C00CEFB2F /* IMEditItemCell.h */,
+				C522601B20EDC90C00CEFB2F /* IMEditItemCell.m */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		C5CD8EEE20ECF2DE0074F18F /* Frameworks */ = {
@@ -142,6 +210,8 @@
 				C5FE1E0120ECF1CA00D45CD2 /* AppDelegate.m */,
 				C5FE1E0320ECF1CA00D45CD2 /* ViewController.h */,
 				C5FE1E0420ECF1CA00D45CD2 /* ViewController.m */,
+				C522600B20EDB65A00CEFB2F /* SubViewControllers */,
+				C522600F20EDBBB100CEFB2F /* DragCellVC */,
 				C522600920EDAA1200CEFB2F /* Utils */,
 				C5FE1E0620ECF1CA00D45CD2 /* Main.storyboard */,
 				C5FE1E0920ECF1CA00D45CD2 /* Assets.xcassets */,
@@ -359,7 +429,11 @@
 			files = (
 				C5FE1E0520ECF1CA00D45CD2 /* ViewController.m in Sources */,
 				C5FE1E1020ECF1CA00D45CD2 /* main.m in Sources */,
+				C522600E20EDB6DF00CEFB2F /* YYDragCellVC.m in Sources */,
+				C522601320EDBC1700CEFB2F /* YYDragCellType1VC.m in Sources */,
 				C5FE1E0220ECF1CA00D45CD2 /* AppDelegate.m in Sources */,
+				C522601D20EDC90C00CEFB2F /* IMEditItemCell.m in Sources */,
+				C522601720EDBEBF00CEFB2F /* YYFlowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
