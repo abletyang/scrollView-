@@ -42,17 +42,17 @@
     [self addSubview:label];
     label.textAlignment = NSTextAlignmentCenter;
     [label mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self).insets(UIEdgeInsetsZero);
+        make.edges.equalTo(self).insets(UIEdgeInsetsMake(5, 0, 0, 5));
     }];
     self.itemTitleLabel = label;
     
-    UIImage *closeImage = [UIImage imageNamed:@""];
+    UIImage *closeImage = [UIImage imageNamed:@"icon_delete_news"];
     UIButton *btn = [[UIButton alloc] init];
     [btn setImage:closeImage forState:UIControlStateNormal];
     [self addSubview:btn];
     [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.mas_top).offset(-5);
-        make.right.equalTo(self.mas_right).offset(5);
+        make.top.equalTo(self.mas_top).offset(0);
+        make.right.equalTo(self.mas_right).offset(0);
         make.width.mas_equalTo(18);
         make.height.mas_equalTo(18);
     }];

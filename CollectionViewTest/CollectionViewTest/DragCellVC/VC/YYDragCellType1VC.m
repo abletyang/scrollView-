@@ -100,7 +100,7 @@
 -(__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     IMEditItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"IMEditItemCell" forIndexPath:indexPath];
-    [cell isShowCloseBtn:NO];
+    [cell isShowCloseBtn:YES];
     if(indexPath.section == 0){
         NSString *title = _selItemArray[indexPath.item];
         [cell setItemTitle:title];
@@ -258,6 +258,9 @@
     }];
 }
 
+
+
+
 #pragma mark --  移动item 代理
 
 -(BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath
@@ -283,16 +286,6 @@
 //        [collectionView reloadData];
 //    }
 }
-
-//- (void)moveItemAtIndexPath:(NSIndexPath *)indexPath toIndexPath:(NSIndexPath *)newIndexPath
-//{
-//    if(!newIndexPath) return;
-//    NSString *item = _selItemArray[indexPath.item];
-//    [_selItemArray removeObject:item];
-//    [_selItemArray insertObject:item atIndex:newIndexPath.item];
-//
-//    self.oldIndexPath = newIndexPath;
-//}
 
 
 #pragma mark -- 懒加载
